@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap");
+
+:root {
+  --accents: orangered;
+  --bodyFonts: "Open Sans", sans-serif;
+  --headings: "Kalam", cursive;
+  --gray: #343a40;
+  --transition: 0.3s ease-in-out;
+  --white: #fff;
+  --black: #000;
+}
+
+/*******************************
+basic
+*********************************/
+
+body {
+  font-family: var(--bodyFonts);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
+}
+
+a {
+  font-family: var(--headings);
+  transition: var(--transition);
+}
+
+.button {
+  background: var(--accents);
+  padding: 15px 40px;
+  width: fit-content;
+  margin: auto;
+  color: var(--white);
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.tiltes h2 {
+  font-size: 5rem;
+  text-align: center;
+  color: var(--gray);
+}
+.tiltes h2::after {
+  display: block;
+  content: "";
+  margin: 10px auto 40px auto;
+  width: 10%;
+  height: 10px;
+  background: var(--accents);
+}
+/*******************************
+navbar
+*********************************/
+.bg-dark {
+  background: var(--gray) !important;
+}
+.navbar-brand {
+  font-size: 1.7rem;
+}
+.navbar-brand:hover {
+  color: var(--accents) !important;
+}
+nav .nav-link {
+  color: var(--accents) !important;
+  font-size: 1.3em;
+  margin-right: 40px;
+}
+nav .nav-link:hover {
+  color: var(--white) !important;
+}
+/*******************************
+header
+*********************************/
+
+header {
+  background-image: url(img/header.jpg);
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header .box {
+  height: 90vh;
+  /* ovo mozemo u bootstapu odraditi */
+  /* display: flex;
+  align-items: center; */
+  /* padding: 30px 0; */
+}
+
+header .card {
+  border: 2px solid var(--gray);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+header .card-title {
+  color: var(--accents);
+  font-weight: 700;
+}
+/*******************************
+card
+*********************************/
+#interests .card {
+  position: relative;
+}
+
+.conerText {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accents);
+  padding: 10px;
+  opacity: 0.9;
+}
+.conerText h5 {
+  margin-bottom: 0;
+  font-family: var(--bodyFonts);
+  font-size: 0.9rem;
+}
+
+.holder {
+  overflow: hidden;
+}
+
+#interests img {
+  transition: var(--transition);
+}
+
+#interests img:hover {
+  transform: scale(1.3);
+}
+
+#interests .card-title {
+  font-size: 1.6rem;
+}
+
+#interests .card-title::after {
+  display: block;
+  content: "";
+  margin: 20px auto 30px auto;
+  width: 10%;
+  height: 7px;
+  background: var(--accents);
+}
+/*******************************
+skills
+*********************************/
+
+#skills {
+  background: var(--black);
+}
+
+#skills i {
+  font-size: 5rem;
+  color: var(--accents);
+  margin-bottom: 20px;
+}
+/*******************************
+porfolio
+*********************************/
+#porfolio img {
+  transition: var(--transition);
+}
+#porfolio img:hover {
+  transform: scale(1.3);
+}
+
+/*******************************
+footer
+*********************************/
+footer {
+  background: var(--accents);
+}
+
+footer .tiltes h2::after {
+  background: var(--gray);
+}
+
+footer a {
+  font-size: 2.5rem;
+  color: var(--gray);
+  margin: 10px;
+}
+
+footer a:hover {
+  color: var(--white);
+  transition-duration: 0.7s ease;
+}
+
+footer i:hover {
+  animation: footer 0.7s ease;
+}
+
+@keyframes footer {
+  100% {
+    transform: rotate(360deg);
+  }
+}
